@@ -5,9 +5,9 @@ import java.util.ArrayList;
  * 
  * @author christoph.stueber@mes-alsfeld.eu
  *
- * @version 03.2018
- * erstellt 21.03.2018
- * geändert 21.03.2018
+ * @version 07.2018
+ * erstellt 16.07.2018
+ * geändert 17.07.2018
  *
  */
 public class Nutzer
@@ -27,18 +27,36 @@ public class Nutzer
     /**
      * Konstruktor zum Erstellen von Objekten der Klasse Nutzer.java
      * 
-     * @param id int
      * @param vorname String
      * @param nachname String
      */
+    public Nutzer(String vorname, String nachname)
+    {
+        this.vorname = vorname;
+        this.nachname = nachname;       
+    }/**
+     * Konstruktor zum Erstellen von Objekten der Klasse Nutzer.java
+     * 
+     * @param vorname String
+     * @param nachname String
+     */
+    public Nutzer()
+    {
+    }
+    /**
+     * Konstruktor zum Erstellen von Objekten der Klasse Nutzer.java
+     * 
+     * @param int id
+     * @param vorname String
+     * @param nachname String
+     */
+    
     public Nutzer(int id, String vorname, String nachname)
     {
-        this.id = id;
+	this.id = id;
         this.vorname = vorname;
-        this.nachname = nachname;
-        
+        this.nachname = nachname;       
     }
-
     /**
      * @return the id
      */

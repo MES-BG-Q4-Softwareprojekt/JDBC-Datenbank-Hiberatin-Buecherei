@@ -27,7 +27,7 @@ public class SetupBaseDB
 {
 
     /**
-     * Löscht rekursiv ein Verzeichninis mit allen Unterverzeichnissen und
+     * Löscht rekursiv ein Verzeichnis mit allen Unterverzeichnissen und
      * Dateien.
      * 
      * @param path String mit dem Name für das Verzeichnis
@@ -50,7 +50,7 @@ public class SetupBaseDB
     }
 
     /**
-     * Packt das mit sourceDirectory anegebene Verzeichnis in ein Archiv mit dem Namen zipFilePath (Java 7 und höher).
+     * Packt das mit sourceDirectory angegebene Verzeichnis in ein Archiv mit dem Namen zipFilePath (Java 7 und höher).
      * 
      * @param sourceDirectory
      * @param zipFilePath
@@ -136,7 +136,7 @@ public class SetupBaseDB
     }
 
     /**
-     * Entpackt die angebene Datei.
+     * Entpackt die angegebene Datei.
      * 
      * @param zipInputStream ZipInputStream
      * @param unzipFilePath Path
