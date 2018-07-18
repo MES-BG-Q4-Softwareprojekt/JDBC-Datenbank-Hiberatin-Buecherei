@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Buch
+comment0.text=\n\ Beschreiben\ sie\ hier\ die\ Klasse\ Buch.java.\n\ \n\ @author\ christoph.stueber@mes-alsfeld.de\n\n\ @version\ 03.2018\n\ \ \ \ \ \ \ \ \ \ erstellt\ 21.03.2018\n\ \ \ \ \ \ \ \ \ \ ge\u00E4ndert\ 21.03.2018\n\n
+comment1.params=idObjekt\ signatur\ titel\ autor\ verlag
+comment1.target=Buch(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Konstruktor\ zum\ Erstellen\ von\ Objekten\ der\ Klasse\ Buch.java\n\ \n\ @param\ idObjekt\ int\n\ @param\ signatur\ String\n\ @param\ titel\ String\n\ @param\ autor\ String\n\ @param\ verlag\ String\n
+comment2.params=
+comment2.target=java.lang.String\ getVerlag()
+comment2.text=\n\ @return\ the\ verlag\n
+comment3.params=verlag
+comment3.target=void\ setVerlag(java.lang.String)
+comment3.text=\n\ @param\ verlag\ the\ verlag\ to\ set\n
+comment4.params=
+comment4.target=java.lang.String\ getAutor()
+comment4.text=\n\ @return\ the\ autor\n
+comment5.params=autor
+comment5.target=void\ setAutor(java.lang.String)
+comment5.text=\n\ @param\ autor\ the\ autor\ to\ set\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\n\ toString-Methode.\n\ \n\ @return\ String\n
+numComments=7

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=VerwalteNutzer
+comment0.text=\n\ @author\ christoph.stueber@mes-alsfeld.eu\n\ \n\ @version\ 2018.07\ erstellt\ 16.07.2018\ ge\u00E4ndert\ 17.07.2018\n\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=fname\ lname
+comment2.target=java.lang.Integer\ addNutzer(java.lang.String,\ java.lang.String)
+comment2.text=Method\ to\ CREATE\ an\ nutzer\ in\ the\ database
+comment3.params=
+comment3.target=void\ listEmployees()
+comment3.text=Method\ to\ READ\ all\ the\ employees
+numComments=4

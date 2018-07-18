@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16.07.2018 18:27:55 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="Nutzer" table="Nutzer">
+	 
+	 <meta attribute = "class-description">
+	         This class contains the nutzer detail. 
+	      </meta>
+	 
+	 
+  <id column="idNutzer" name="id" type="int"><generator class="native"/></id>
+  <property column="vorname"  name="vorname" type="java.lang.String"/>
+  <property column="nachname" name="nachname" type="java.lang.String"/>
+ </class>
+</hibernate-mapping>

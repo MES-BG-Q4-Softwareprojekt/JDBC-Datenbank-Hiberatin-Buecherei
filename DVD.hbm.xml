@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16.07.2018 18:27:55 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <joined-subclass name="DVD" extends="Objekt" table="DVD" lazy="false">
+        <key>
+            <column name="ID" />
+        </key>
+        <property name="fsk" type="int" access="field">
+            <column name="FSK" />
+        </property>
+        <property name="jahr" type="int">
+            <column name="JAHR" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

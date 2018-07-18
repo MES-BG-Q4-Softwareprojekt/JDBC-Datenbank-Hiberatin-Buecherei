@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=BibliothekHSQL
+comment0.text=\n\ Beschreiben\ sie\ hier\ die\ Klasse\ readBaseFile\n\ \n\ @author\ christoph.stueber@mes-alsfeld.eu\n\n\ @version\ 2017.11\n\ \ \ \ \ \ \ \ \ \ erstellt\ 11.11.2017\n\ \ \ \ \ \ \ \ \ \ ge\u00E4ndert\ 12.11.2017\n\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Main-Methode,\ die\ eine\ HSQLDB-Datenbank\ in\ eine\ komplexe\ Datenstruktur\n\ einliest\ und\ anschlie\u00DFen\ auf\ der\ Konsole\ ausgibt.\n\ \n\ @param\ args\ String[]\n
+numComments=2

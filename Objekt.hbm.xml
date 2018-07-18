@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16.07.2018 18:27:55 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Objekt" table="OBJEKT">
+        <id name="id" type="int" access="field">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="signatur" type="java.lang.String">
+            <column name="SIGNATUR" />
+        </property>
+        <property name="titel" type="java.lang.String">
+            <column name="TITEL" />
+        </property>
+        <list name="meineNutzer" inverse="false" table="NUTZER" lazy="true" access="field">
+            <key>
+                <column name="ID" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="Nutzer" />
+        </list>
+    </class>
+</hibernate-mapping>
