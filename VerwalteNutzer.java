@@ -1,11 +1,19 @@
 
 import java.util.List;
+import java.util.logging.Level;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hsqldb.persist.Logger;
+
+
+
+
+
+
 
 /**
  * @author christoph.stueber@mes-alsfeld.eu
@@ -33,7 +41,7 @@ public class VerwalteNutzer
 	VerwalteNutzer verwaltung = new VerwalteNutzer();
 
 	/* List down all the employees */
-	verwaltung.listEmployees();
+	verwaltung.listNutzer();
 
 	/* Add few nutzer records in database */
 	Integer id1 = verwaltung.addNutzer("Zara", "Ali");
@@ -41,10 +49,17 @@ public class VerwalteNutzer
 	Integer id3 = verwaltung.addNutzer("John", "Paul");
 
 	/* List down all the employees */
-	verwaltung.listEmployees();
+	verwaltung.listNutzer();
+	
+	/* Nutzer wieder löschen */
+	verwaltung.removeNutzer(id1);
+	verwaltung.removeNutzer(id2);
+	verwaltung.removeNutzer(id3);
+	
+	verwaltung.listNutzer();
     }
 
-    /** Method to CREATE an nutzer in the database */
+    /** Method to CREATE a Nutzer in the database */
     public Integer addNutzer(String fname, String lname)
     {
 	Session session = factory.openSession();
@@ -69,8 +84,8 @@ public class VerwalteNutzer
 	return einNutzerId;
     }
 
-    /* Method to READ all the employees */
-    public void listEmployees()
+    /* Method to READ all the Nutzer */
+    public void listNutzer()
     {
 	Session session = factory.openSession();
 	// Session session = factory.getCurrentSession();
@@ -98,4 +113,22 @@ public class VerwalteNutzer
 	}
     }
 
+    /* Method to DELETE a Nutzer from the records */
+    public void removeNutzer(Integer id){
+       Session session = factory.openSession();
+       Transaction tx = null;
+       
+       try {
+          tx = session.beginTransaction();
+          Nutzer einNutzer = (Nutzer) session.get(Nutzer.class, id); 
+          session.delete(einNutzer); 
+          tx.commit();
+       } catch (HibernateException e) {
+          if (tx!=null) tx.rollback();
+          e.printStackTrace(); 
+       } finally {
+          session.close(); 
+       }
+    }
+    
 }

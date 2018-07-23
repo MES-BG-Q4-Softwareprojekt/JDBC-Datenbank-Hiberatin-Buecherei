@@ -271,7 +271,7 @@ public class SetupBaseDB
         String dbName = "Bibliothek";
         System.out.println("Öffnen von " + dbName + ".odb");
         base2hsql(dbName + ".odb", false);
-        hsql2base(dbName, false);
+        //hsql2base(dbName, false);
     }
 
 }

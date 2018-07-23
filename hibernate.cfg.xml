@@ -2,12 +2,18 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory name="session">
+ <session-factory>
   <property name="hibernate.connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property>
   <property name="hibernate.connection.url">jdbc:hsqldb:file:Bibliothek/database/Bibliothek</property>
   <property name="hibernate.connection.username">SA</property>
-  <property name="hibernate.connection.password"></property>
+  <!-- JDBC connection pool (use the built-in) -->
+  <property name="hibernate.connection.pool_size">2</property>
   <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+  <property name="hibernate.default_schema">PUBLIC</property>
+  <property name="hibernate.show_sql">false</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.connection.autocommit">true</property>
+  <property name="hibernate.connection.shutdown">true</property>
   <mapping resource="Nutzer.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
